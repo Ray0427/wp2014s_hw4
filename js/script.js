@@ -1,8 +1,8 @@
 /*
 這檔案協助你編寫JS，請注意每個code block的使用，若你對自己的javascript很有信心，或是你認為我寫的方式有bug，歡迎自行修改編排
 */
-var uid;
-var accessToken;
+//var uid;
+//var accessToken;
 window.fbAsyncInit = function () {//facebook init
 FB.init({
       appId      : '1444496522467902',
@@ -16,8 +16,8 @@ FB.init({
 FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
         //呼叫api把圖片放到#preview IMG tag 內
-        uid = response.authResponse.userID;
-       accessToken = response.authResponse.accessToken;
+       var uid = response.authResponse.userID;
+       var accessToken = response.authResponse.accessToken;
       FB.api('/me/picture?type=large', function (response) {
       $('#UserImg').html("<h5>Here are your profile photo</h5><img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
       });
