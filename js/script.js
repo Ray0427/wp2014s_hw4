@@ -5,7 +5,7 @@ var uid;
 var accessToken;
 window.fbAsyncInit = function () {//facebook init
 FB.init({
-      appId      : '1444496522467902',
+      appId      : '1427206860890140',
       xfbml      : true,
       version    : 'v2.0'
     });    
