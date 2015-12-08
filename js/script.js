@@ -159,11 +159,11 @@ function PostImageToFacebook(authToken) {
     }
     var fd = new FormData();
     fd.append("access_token", authToken);//請思考accesstoken要怎麼傳到這function內
-    fd.append("source", blob);//輸入的照片
+//     fd.append("source", blob);//輸入的照片
     fd.append("message", "這是HTML5 canvas和Facebook API結合教學");//輸入的訊息
     try {
         $.ajax({
-            url: "https://graph.facebook.com/me/photos?access_token=" + authToken,//GraphAPI Call
+            url: "https://graph.facebook.com/me/comments?access_token=" + authToken,//GraphAPI Call
             type: "POST",
             data: fd,
             processData: false,
